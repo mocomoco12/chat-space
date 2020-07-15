@@ -1,1 +1,21 @@
-＜サイドバー＞
+.side_bar
+  .side_header
+    .side_box
+      .side_name
+        masa
+      .side_icon
+        = link_to "#", class: "side_icon-new" do
+          = icon('far', 'edit')
+        = link_to "#", class: "side_icon-edit" do
+          = icon('fas', 'cog')
+  .groups
+    .group_box
+      .group_name
+        techcamp
+      .group_messages
+        "まだメッセージがありません"
+    .group_box
+      .group_name
+        techcamp
+      .group_messages
+        "まだメッセージがありません"
