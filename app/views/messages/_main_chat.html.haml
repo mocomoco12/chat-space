@@ -1,39 +1,39 @@
-.main_chat
-  .main_header
-    .main_header-box
-      .group_name
+.Main-chat
+  .Main-header
+    .Main-header__box
+      .Main-header__group-name
         test
-      %ul.member_list 
+      %ul.Main-header__member-list 
         Member :
-        %li.member 
+        %li.Main-header__member-list--name
           masa
-    = link_to "#",class: "edit_btn" do
+    = link_to "#",class: "Main-header__edit-btn" do
       Edit
-  .messages
-    .message_box
-      .message_info
-        .name
+  .Message
+    .Message__box
+      .Message__info
+        .Message__info-name
           masa
-        .date 
+        .Message__info-date 
           2019/11/20(Wed) 17:43:01
-      .message_contents
-        .content 
+      .Message__content
+        .Message__content-text
           おはよう！
-        .image
-    .message_box
-      .message_info
-        .name 
+        .Message__content-image
+    .Message__box
+      .Message__info
+        .Message__info-name
           masa
-        .date 
+        .Message__info-date 
           2019/11/20(Wed) 17:43:34
-      .message_contents
-        .content 
+      .Message__content
+        .Message__content-text
           今日は夜から雨
-        .image
-  .form
-    %form.form_box
-      %input.form_content{placeholder: "type a message", type: "text"}
-      %label.form_icon-new
+        .Message__content-image
+  .Form
+    %form.Form__box
+      %input.Form__content{placeholder: "type a message", type: "text"}
+      %label.Form__new-icon
         = icon('fas', 'image')
-        %input.image_file{type: "file"}
-      %input.submit_btn{value: "Send",type: "submit"}
+        %input.Form__image-file{type: "file"}
+      %input.Form__submit-btn{value: "Send",type: "submit"}
