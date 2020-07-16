@@ -48,12 +48,15 @@
       .Group__box{
         height: 100px;
         padding: 20px 0 40px;
-        &-name{
-          font-size: 15px;
-          margin-bottom: 5px;
-        }
-        &-message{
-          font-size: 11px;
+        &-content{
+          color: #ffffff;
+          .Group__box-name{
+            font-size: 15px;
+            margin-bottom: 5px;
+          }
+          .Group__box-message{
+            font-size: 11px;
+          }
         }
       }
     }

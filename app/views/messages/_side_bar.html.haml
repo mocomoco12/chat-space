@@ -4,18 +4,15 @@
       .Side-header__box-name
         = current_user.name
       .Side-header__box-icon
-        = link_to "#", class: "Side-header__box-icon--new" do
+        = link_to new_group_path, class: "Side-header__box-icon--new" do
           = icon('far', 'edit')
         = link_to edit_user_path(current_user), class: "Side-header__box-icon--edit" do
           = icon('fas', 'cog')
   .Group
-    .Group__box
-      .Group__box-name
-        techcamp
-      .Group__box-message
-        "まだメッセージがありません"
-    .Group__box
-      .Group__box-name
-        techcamp-
-      .Group__box-message
-        "まだメッセージがありません"
+    - current_user.groups.each do |group|
+      .Group__box
+        = link_to '#', class: "Group__box-content" do
+          .Group__box-name
+            = group.name
+          .Group__box-message
+            メッセージはまだありません
