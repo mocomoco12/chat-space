@@ -11,8 +11,8 @@
   .Group
     - current_user.groups.each do |group|
       .Group__box
-        = link_to '#', class: "Group__box-content" do
+        = link_to group_messages_path(group), class: "Group__box-content" do
           .Group__box-name
             = group.name
           .Group__box-message
-            メッセージはまだありません
+            = group.show_last_message
