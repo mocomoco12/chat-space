@@ -2,7 +2,7 @@ $(function(){
   function buildHTML(message){
     if ( message.image ) {
       let html =
-        `<div class="Message__box">
+        `<div class="Message__box" data-message-id=${message.id}>
           <div class="Message__info">
             <div class="Message__info-name">
               ${message.user_name}
@@ -21,7 +21,7 @@ $(function(){
       return html;
     } else {
       let html =
-      `<div class="Message__box">
+      `<div class="Message__box" data-message-id=${message.id}>
         <div class="Message__info">
           <div class="Message__info-name">
             ${message.user_name}
@@ -59,7 +59,6 @@ $(function(){
       $('.Message').animate({ scrollTop: $('.Message')[0].scrollHeight});
       $('.Form__submit-btn').prop('disabled', false);
     })
-
     .fail(function() {
       alert("メッセージ送信に失敗しました");
     });
